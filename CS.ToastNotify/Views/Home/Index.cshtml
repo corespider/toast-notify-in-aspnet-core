@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await Component.InvokeAsync("Notyf")
+
+<form method="post" asp-controller="Home" asp-action="Index">
+    <div class="text-center">
+        <button class="btn btn-success" name="submit" value="Success">Toast Success</button>
+        <button class="btn btn-primary" name="submit" value="Info">Toast Info</button>
+        <button class="btn btn-danger" name="submit" value="Error">Toast Error</button>
+        <button class="btn btn-warning" name="submit" value="Warning">Toast Warning</button>
+    </div>
+</form>
